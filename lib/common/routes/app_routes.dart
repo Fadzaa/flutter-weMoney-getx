@@ -10,6 +10,7 @@ abstract class Routes {
   static const DETAIL_BALANCE_PAGE = _Paths.DETAIL_BALANCE_PAGE;
   static const MANUAL_TRANSACTION = _Paths.MANUAL_TRANSACTION ;
   static const LIST_TRANSACTION = _Paths.LIST_TRANSACTION ;
+  static const ADD_CASH_BALANCE = _Paths.ADD_CASH_BALANCE ;
 }
 
 abstract class _Paths {
@@ -22,5 +23,6 @@ abstract class _Paths {
   static const DETAIL_BALANCE_PAGE = '/detail-balance';
   static const MANUAL_TRANSACTION  = '/manual-transaction';
   static const LIST_TRANSACTION  = '/list-transaction';
+  static const ADD_CASH_BALANCE  = '/add-cash-balance';
 
 }
