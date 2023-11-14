@@ -43,6 +43,14 @@ TextStyle tsBalance = GoogleFonts.montserrat(
   )
 );
 
+TextStyle tsCurrency = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 16,
+        color: primaryTextColor,
+        fontWeight: FontWeight.normal
+    )
+);
+
 TextStyle tsHeading = GoogleFonts.montserrat(
     textStyle: const TextStyle(
         fontSize: 12,
@@ -58,4 +66,14 @@ TextStyle tsPrimaryMedium = GoogleFonts.montserrat(
         fontWeight: FontWeight.w500
     )
 );
+
+TextStyle tsSmallBalance = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 16,
+        color: successColor,
+        fontWeight: FontWeight.w600
+    )
+);
+
+
 
