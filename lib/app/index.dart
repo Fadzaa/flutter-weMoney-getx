@@ -23,3 +23,6 @@ export 'features/home_page/home_page_view.dart' show HomePageView;
 
 //Balance Detail Page
 export 'features/balance_detail_page/detail_balance_view.dart' show DetailBalanceView;
+
+//Manual Transaction
+export 'features/manual_transaction/manual_transaction_view.dart' show ManualTransactionView;
