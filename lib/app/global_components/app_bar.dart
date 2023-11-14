@@ -6,10 +6,14 @@ import '../../common/helper/index.dart';
 class CommonAppBar extends StatelessWidget {
   const CommonAppBar({
     super.key,
-    required this.text
+    required this.text,
+    required this.showIcon,
+    this.image
   });
 
   final String text;
+  final String? image;
+  final bool showIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class CommonAppBar extends StatelessWidget {
 
         Text(text.toUpperCase(), style: tsHeading,),
 
-        const SizedBox()
+        showIcon ? SvgPicture.asset(image!) : const SizedBox()
 
       ],
     );

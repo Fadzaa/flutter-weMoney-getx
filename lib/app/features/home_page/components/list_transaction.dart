@@ -72,7 +72,7 @@ class TransactionLayout extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Container(
-      width: width * 0.83,
+      width: width,
 
       margin: EdgeInsets.only(top: 10, bottom: 10),
       child: Column(
