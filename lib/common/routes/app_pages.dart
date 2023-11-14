@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:we_money_getx/app/features/home_page/home_page_view.dart';
 import 'package:we_money_getx/app/index.dart';
 
 part 'app_routes.dart';
@@ -7,7 +6,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME_PAGE;
+  static const INITIAL = Routes.DETAIL_BALANCE_PAGE;
 
   static final routes = [
     GetPage(
@@ -31,8 +30,13 @@ class AppPages {
         binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
     GetPage(
-        name: _Paths.HOMEPAGE,
+        name: _Paths.HOME_PAGE,
         page: () => HomePageView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.DETAIL_BALANCE_PAGE,
+        page: () => DetailBalanceView(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
   ];

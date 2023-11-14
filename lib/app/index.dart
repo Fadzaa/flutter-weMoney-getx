@@ -17,3 +17,9 @@ export 'initial_pages/login_screen/login_screen_binding.dart' show LoginScreenBi
 export 'initial_pages/onboarding_screen/onboarding_screen_view.dart' show OnboardingScreenView;
 export 'initial_pages/onboarding_screen/onboarding_screen_controller.dart' show OnboardingScreenController;
 export 'initial_pages/onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;
+
+//Home Page
+export 'features/home_page/home_page_view.dart' show HomePageView;
+
+//Balance Detail Page
+export 'features/balance_detail_page/detail_balance_view.dart' show DetailBalanceView;

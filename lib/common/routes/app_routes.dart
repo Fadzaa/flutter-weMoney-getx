@@ -6,7 +6,8 @@ abstract class Routes {
   static const REGISTER_SCREEN = _Paths.REGISTER_SCREEN;
   static const LOGIN_SCREEN = _Paths.LOGIN_SCREEN;
   static const ONBOARDING_SCREEN = _Paths.ONBOARDING_SCREEN;
-  static const HOME_PAGE = _Paths.HOMEPAGE;
+  static const HOME_PAGE = _Paths.HOME_PAGE;
+  static const DETAIL_BALANCE_PAGE = _Paths.DETAIL_BALANCE_PAGE;
 }
 
 abstract class _Paths {
@@ -15,6 +16,7 @@ abstract class _Paths {
   static const REGISTER_SCREEN = '/register-screen';
   static const LOGIN_SCREEN = '/login-screen';
   static const ONBOARDING_SCREEN = '/onboarding-screen';
-  static const HOMEPAGE = '/home-page';
+  static const HOME_PAGE = '/home';
+  static const DETAIL_BALANCE_PAGE = '/detail-balance';
 
 }
