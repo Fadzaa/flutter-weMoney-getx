@@ -49,5 +49,10 @@ class AppPages {
         page: () => AddCashBalanceView(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.ADD_NEW_ACCOUNT,
+        page: () => AddNewAccountView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
   ];
 }
