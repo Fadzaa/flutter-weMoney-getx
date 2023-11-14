@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:we_money_getx/app/index.dart';
-import 'package:we_money_getx/common/helper/themes.dart';
+import 'package:we_money_getx/common/helper/colors.dart';
 
 class OnboardingScreenView extends GetView<OnboardingScreenController> {
   OnboardingScreenView({super.key});
