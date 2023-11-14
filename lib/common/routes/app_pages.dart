@@ -6,7 +6,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.MANUAL_TRANSACTION;
+  static const INITIAL = Routes.ADD_CASH_BALANCE;
 
   static final routes = [
     GetPage(
@@ -45,8 +45,8 @@ class AppPages {
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
     GetPage(
-        name: _Paths.LIST_TRANSACTION,
-        page: () => ListTransactionView(),
+        name: _Paths.ADD_CASH_BALANCE,
+        page: () => AddCashBalanceView(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
   ];

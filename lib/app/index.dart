@@ -29,3 +29,6 @@ export 'features/manual_transaction/manual_transaction_view.dart' show ManualTra
 
 //List Transaction
 export 'features/list_transaction_page/list_transaction_view.dart' show ListTransactionView;
+
+//Add Cash Balance
+export 'features/add_cash_balance_page/add_cash_balance_view.dart' show AddCashBalanceView;
