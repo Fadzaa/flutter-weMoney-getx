@@ -44,5 +44,10 @@ class AppPages {
         page: () => ManualTransactionView(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.LIST_TRANSACTION,
+        page: () => ListTransactionView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
   ];
 }

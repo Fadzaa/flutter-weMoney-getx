@@ -9,6 +9,7 @@ abstract class Routes {
   static const HOME_PAGE = _Paths.HOME_PAGE;
   static const DETAIL_BALANCE_PAGE = _Paths.DETAIL_BALANCE_PAGE;
   static const MANUAL_TRANSACTION = _Paths.MANUAL_TRANSACTION ;
+  static const LIST_TRANSACTION = _Paths.LIST_TRANSACTION ;
 }
 
 abstract class _Paths {
@@ -20,5 +21,6 @@ abstract class _Paths {
   static const HOME_PAGE = '/home';
   static const DETAIL_BALANCE_PAGE = '/detail-balance';
   static const MANUAL_TRANSACTION  = '/manual-transaction';
+  static const LIST_TRANSACTION  = '/list-transaction';
 
 }
