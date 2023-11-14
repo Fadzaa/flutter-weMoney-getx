@@ -1,19 +1,19 @@
 // Splash Screen
-export './splash_screen/splash_screen_view.dart' show SplashScreenView;
-export './splash_screen/splash_screen_controller.dart' show SplashScreenController;
-export './splash_screen/splash_screen_binding.dart' show SplashScreenBinding;
+export 'initial_pages/splash_screen/splash_screen_view.dart' show SplashScreenView;
+export 'initial_pages/splash_screen/splash_screen_controller.dart' show SplashScreenController;
+export 'initial_pages/splash_screen/splash_screen_binding.dart' show SplashScreenBinding;
 
 // Register Screen
-export './register_screen/register_screen_view.dart' show RegisterScreenView;
-export './register_screen/register_screen_controller.dart' show RegisterScreenController;
-export './register_screen/register_screen_binding.dart' show RegisterScreenBinding;
+export 'initial_pages/register_screen/register_screen_view.dart' show RegisterScreenView;
+export 'initial_pages/register_screen/register_screen_controller.dart' show RegisterScreenController;
+export 'initial_pages/register_screen/register_screen_binding.dart' show RegisterScreenBinding;
 
 // Login Screen 
-export './login_screen/login_screen_view.dart' show LoginScreenView;
-export './login_screen/login_screen_controller.dart' show LoginScreenController;
-export './login_screen/login_screen_binding.dart' show LoginScreenBinding;
+export 'initial_pages/login_screen/login_screen_view.dart' show LoginScreenView;
+export 'initial_pages/login_screen/login_screen_controller.dart' show LoginScreenController;
+export 'initial_pages/login_screen/login_screen_binding.dart' show LoginScreenBinding;
 
 // Onboarding Screen
-export './onboarding_screen/onboarding_screen_view.dart' show OnboardingScreenView;
-export './onboarding_screen/onboarding_screen_controller.dart' show OnboardingScreenController;
-export './onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;
+export 'initial_pages/onboarding_screen/onboarding_screen_view.dart' show OnboardingScreenView;
+export 'initial_pages/onboarding_screen/onboarding_screen_controller.dart' show OnboardingScreenController;
+export 'initial_pages/onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;

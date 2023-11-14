@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:we_money_getx/app/splash_screen/splash_screen_controller.dart';
+import 'package:we_money_getx/app/initial_pages/splash_screen/splash_screen_controller.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
 
 class SplashScreenView extends GetView<SplashScreenController> {
