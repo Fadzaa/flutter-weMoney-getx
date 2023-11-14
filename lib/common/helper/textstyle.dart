@@ -75,5 +75,13 @@ TextStyle tsSmallBalance = GoogleFonts.montserrat(
     )
 );
 
+TextStyle tsHint = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 10,
+        color: hintColor,
+        fontWeight: FontWeight.normal
+    )
+);
+
 
 

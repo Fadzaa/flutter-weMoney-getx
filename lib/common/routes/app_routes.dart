@@ -8,6 +8,7 @@ abstract class Routes {
   static const ONBOARDING_SCREEN = _Paths.ONBOARDING_SCREEN;
   static const HOME_PAGE = _Paths.HOME_PAGE;
   static const DETAIL_BALANCE_PAGE = _Paths.DETAIL_BALANCE_PAGE;
+  static const MANUAL_TRANSACTION = _Paths.MANUAL_TRANSACTION ;
 }
 
 abstract class _Paths {
@@ -18,5 +19,6 @@ abstract class _Paths {
   static const ONBOARDING_SCREEN = '/onboarding-screen';
   static const HOME_PAGE = '/home';
   static const DETAIL_BALANCE_PAGE = '/detail-balance';
+  static const MANUAL_TRANSACTION  = '/manual-transaction';
 
 }

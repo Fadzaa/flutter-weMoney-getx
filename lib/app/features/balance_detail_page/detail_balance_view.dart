@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:we_money_getx/app/features/balance_detail_page/components/connect_account.dart';
+import 'package:we_money_getx/app/features/balance_detail_page/components/set_balance_limit.dart';
 import 'package:we_money_getx/app/features/home_page/components/balance_overview.dart';
 import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
 import 'package:we_money_getx/common/helper/index.dart';
@@ -38,7 +40,11 @@ class DetailBalanceView extends GetView {
 
             SizedBox(height: 10,),
 
+            const SetBalanceLimit(),
 
+            SizedBox(height: 30,),
+
+            const ConnectAccount(),
 
 
           ],
