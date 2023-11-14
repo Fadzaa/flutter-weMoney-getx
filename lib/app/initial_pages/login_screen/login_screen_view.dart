@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:we_money_getx/app/initial_pages/splash_screen/splash_screen_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:we_money_getx/app/splash_screen/splash_screen_controller.dart';
 
 class LoginScreenView extends GetView<SplashScreenController> {
   const LoginScreenView({super.key});

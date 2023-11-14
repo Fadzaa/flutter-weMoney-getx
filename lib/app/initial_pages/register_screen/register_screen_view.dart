@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:we_money_getx/app/initial_pages/splash_screen/splash_screen_controller.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:we_money_getx/app/splash_screen/splash_screen_controller.dart';
-import 'package:we_money_getx/common/helper/themes.dart';
+
+import '../../../common/helper/index.dart';
+
 
 class RegisterScreenView extends GetView<SplashScreenController> {
   const RegisterScreenView({super.key});
@@ -11,7 +13,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: secondaryColor,
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.only(left: 24),
 
@@ -180,7 +182,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
               ElevatedButton(onPressed: (){},
                   style: ElevatedButton.styleFrom(
                       fixedSize: Size(302, 53),
-                      backgroundColor: secondaryColor
+                      backgroundColor: Colors.white
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -213,7 +215,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
               ElevatedButton(onPressed: (){},
                   style: ElevatedButton.styleFrom(
                       fixedSize: Size(302, 53),
-                      backgroundColor: secondaryColor
+                      backgroundColor: Colors.white
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
