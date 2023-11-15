@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/index.dart';
 import 'package:we_money_getx/app/initial_pages/navbar/navbar.dart';
 
@@ -7,7 +8,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH_SCREEN;
+  static const INITIAL = Routes.LOGIN_SCREEN;
 
   static final routes = [
     GetPage(
@@ -63,6 +64,10 @@ class AppPages {
     GetPage(
         name: _Paths.NAVBAR,
         page: () => Navbar(),
+  ),
+  GetPage(
+        name: _Paths.EDIT_PROFILE,
+        page: () => EditProfile(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
   ];

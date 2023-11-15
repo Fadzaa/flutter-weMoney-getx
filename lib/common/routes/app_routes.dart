@@ -30,4 +30,6 @@ abstract class _Paths {
   static const ADD_NEW_ACCOUNT  = '/add-new-account';
   static const EDIT_PROFILE  = '/edit-profile';
   static const NAVBAR  = '/navbar';
+
+
 }

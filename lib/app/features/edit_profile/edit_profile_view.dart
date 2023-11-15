@@ -7,13 +7,28 @@ class EditProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
-          SvgPicture.asset("assets/atas.svg", width: MediaQuery.of(context).size.width,),
+          Image.asset(
+            "assets/atas1.png",
+            height: height * 0.26,
+            width: width,
+            fit: BoxFit.fill,
+            ),
+
+          Positioned(
+            bottom: 0,
+            child: SvgPicture.asset("assets/bawah.svg",
+              width: MediaQuery.of(context).size.width,
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.only(top: 84.22, left: 24, right: 24),
+            padding: const EdgeInsets.only(top: 20, left: 24, right: 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -68,7 +83,7 @@ class EditProfile extends StatelessWidget {
                         ),
                         Positioned(
                           bottom: 0,
-                          right: 120,
+                          right: 85,
                           child: InkWell( onTap: () {
 
                           },
@@ -151,6 +166,7 @@ class EditProfile extends StatelessWidget {
                           width: double.infinity,
                           height: 54,
                           child: TextField(
+                            obscureText: true,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)
@@ -194,12 +210,7 @@ class EditProfile extends StatelessWidget {
               ],
             ),
           ),
-          Positioned(
-            bottom: 0,
-            child: SvgPicture.asset("assets/bawah.svg",
-              width: MediaQuery.of(context).size.width,
-            ),
-          )
+
         ],
       ),
     );
