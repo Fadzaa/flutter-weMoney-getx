@@ -1,21 +1,37 @@
 // Splash Screen
-export './splash_screen/splash_screen_view.dart' show SplashScreenView;
-export './splash_screen/splash_screen_controller.dart' show SplashScreenController;
-export './splash_screen/splash_screen_binding.dart' show SplashScreenBinding;
+export 'initial_pages/splash_screen/splash_screen_view.dart' show SplashScreenView;
+export 'initial_pages/splash_screen/splash_screen_controller.dart' show SplashScreenController;
+export 'initial_pages/splash_screen/splash_screen_binding.dart' show SplashScreenBinding;
 
 // Register Screen
-export './register_screen/register_screen_view.dart' show RegisterScreenView;
-export './register_screen/register_screen_controller.dart' show RegisterScreenController;
-export './register_screen/register_screen_binding.dart' show RegisterScreenBinding;
+export 'initial_pages/register_screen/register_screen_view.dart' show RegisterScreenView;
+export 'initial_pages/register_screen/register_screen_controller.dart' show RegisterScreenController;
+export 'initial_pages/register_screen/register_screen_binding.dart' show RegisterScreenBinding;
 
 // Login Screen 
-export './login_screen/login_screen_view.dart' show LoginScreenView;
-export './login_screen/login_screen_controller.dart' show LoginScreenController;
-export './login_screen/login_screen_binding.dart' show LoginScreenBinding;
+export 'initial_pages/login_screen/login_screen_view.dart' show LoginScreenView;
+export 'initial_pages/login_screen/login_screen_controller.dart' show LoginScreenController;
+export 'initial_pages/login_screen/login_screen_binding.dart' show LoginScreenBinding;
 
 // Onboarding Screen
-export './onboarding_screen/onboarding_screen_view.dart' show OnboardingScreenView;
-export './onboarding_screen/onboarding_screen_controller.dart' show OnboardingScreenController;
-export './onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;
+export 'initial_pages/onboarding_screen/onboarding_screen_view.dart' show OnboardingScreenView;
+export 'initial_pages/onboarding_screen/onboarding_screen_controller.dart' show OnboardingScreenController;
+export 'initial_pages/onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;
 
-export './profile_screen/profile_screen_view.dart' show ProfileScreenView;
+//Home Page
+export 'features/home_page/home_page_view.dart' show HomePageView;
+
+//Balance Detail Page
+export 'features/balance_detail/detail_balance_view.dart' show DetailBalanceView;
+
+//Manual Transaction
+export 'features/manual_transaction/manual_transaction_view.dart' show ManualTransactionView;
+
+//List Transaction
+export 'features/list_transaction_page/list_transaction_view.dart' show ListTransactionView;
+
+//Add Cash Balance
+export 'features/add_cash_balance/add_cash_balance_view.dart' show AddCashBalanceView;
+
+//Add New Account
+export 'features/add_new_account/add_new_account_view.dart' show AddNewAccountView;

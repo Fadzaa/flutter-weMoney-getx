@@ -6,7 +6,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN_SCREEN;
+  static const INITIAL = Routes.SPLASH_SCREEN;
 
   static final routes = [
     GetPage(
@@ -28,6 +28,36 @@ class AppPages {
         name: _Paths.ONBOARDING_SCREEN,
         page: () => OnboardingScreenView(),
         binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.HOME_PAGE,
+        page: () => HomePageView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.DETAIL_BALANCE_PAGE,
+        page: () => DetailBalanceView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.MANUAL_TRANSACTION,
+        page: () => ManualTransactionView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.ADD_CASH_BALANCE,
+        page: () => AddCashBalanceView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.ADD_NEW_ACCOUNT,
+        page: () => AddNewAccountView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.LIST_TRANSACTION,
+        page: () => ListTransactionView(),
+        // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
   ];
 }
