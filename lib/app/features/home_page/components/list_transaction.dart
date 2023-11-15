@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/common_heading.dart';
 import 'package:we_money_getx/common/helper/index.dart';
+
+import '../../../../common/routes/app_pages.dart';
 
 class ListTransaction extends StatelessWidget {
   const ListTransaction({super.key});
@@ -20,9 +23,12 @@ class ListTransaction extends StatelessWidget {
               "LAST TRANSACTION",
               style: tsHeading,
             ),
-            Text(
-              "See All",
-              style: tsPrimaryMedium,
+            InkWell(
+              onTap: () {Get.toNamed(Routes.LIST_TRANSACTION);},
+              child: Text(
+                "See All",
+                style: tsPrimaryMedium,
+              ),
             )
           ],
         ),

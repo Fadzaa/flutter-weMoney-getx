@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../common/helper/index.dart';
+import '../../../common/routes/app_pages.dart';
 
 
 class RegisterScreenView extends GetView<SplashScreenController> {
@@ -18,6 +19,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
         padding: const EdgeInsets.only(left: 24),
 
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
 
@@ -142,7 +144,10 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 21,
               ),
 
-              ElevatedButton(onPressed: (){},
+              ElevatedButton(onPressed: (){
+                Get.toNamed(Routes.HOME_PAGE);
+
+              },
                   style: ElevatedButton.styleFrom(
                       fixedSize: Size(305, 45),
                       backgroundColor: primaryColor
@@ -245,11 +250,33 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 33,
               ),
 
-              Text("Already have an account? Sign In",
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 10
-                ),)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already have an account? Sign In",
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10
+                    ),
+                  ),
+
+                  SizedBox(width: 5,),
+
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed(Routes.LOGIN_SCREEN);
+
+                    },
+                    child: Text("Sign In",
+                      style: GoogleFonts.poppins(
+                        color: primaryColor,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 10
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ]
         ),
       ),
