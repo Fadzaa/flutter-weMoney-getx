@@ -114,7 +114,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                   height: 45,
                   child: ElevatedButton
                     (onPressed: (){
-                    Get.toNamed(Routes.HOME_PAGE);
+                    Get.toNamed(Routes.NAVBAR);
                     },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: primaryColor,

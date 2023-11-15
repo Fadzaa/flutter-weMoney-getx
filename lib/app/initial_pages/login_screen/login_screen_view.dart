@@ -119,7 +119,7 @@ class LoginScreenView extends GetView<SplashScreenController> {
                 height: 45,
                 child: ElevatedButton(
                     onPressed: () {
-                      Get.toNamed(Routes.HOME_PAGE);
+                      Get.toNamed(Routes.NAVBAR);
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFF09ADFC),
