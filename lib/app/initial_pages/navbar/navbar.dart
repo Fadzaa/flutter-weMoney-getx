@@ -5,6 +5,7 @@ import 'package:we_money_getx/app/features/balance_detail/detail_balance_view.da
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/features/home_page/home_page_view.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_view.dart';
+import 'package:we_money_getx/app/profile_screen/profile_screen_view.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
 
 class Navbar extends StatelessWidget {
@@ -22,7 +23,7 @@ class Navbar extends StatelessWidget {
         EditProfile(),
         ManualTransactionView(),
         DetailBalanceView(),
-        DetailBalanceView(),
+        ProfileScreenView(),
       ];
     }
 

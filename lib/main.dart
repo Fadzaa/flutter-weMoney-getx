@@ -17,7 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: ProfileScreenView(),
+        title: 'WeMoney',
+        theme: ThemeData(
+          // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          // useMaterial3: true,
+        ),
+        initialRoute: AppPages.INITIAL,
+        getPages: AppPages.routes
     );
   }
 
