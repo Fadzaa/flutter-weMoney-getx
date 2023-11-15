@@ -33,7 +33,7 @@ class LoginScreenView extends GetView<SplashScreenController> {
                   ),
                 ),
 
-                Image.asset("assets/logo_app.png"),
+                Image.asset("assets/icon-wallet.png"),
 
                 Container(
 
