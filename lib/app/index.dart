@@ -17,3 +17,5 @@ export './login_screen/login_screen_binding.dart' show LoginScreenBinding;
 export './onboarding_screen/onboarding_screen_view.dart' show OnboardingScreenView;
 export './onboarding_screen/onboarding_screen_controller.dart' show OnboardingScreenController;
 export './onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;
+
+export './profile_screen/profile_screen_view.dart' show ProfileScreenView;
