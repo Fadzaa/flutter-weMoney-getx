@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/index.dart';
 import 'package:we_money_getx/app/initial_pages/navbar/navbar.dart';
+import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
 
 part 'app_routes.dart';
 
@@ -68,6 +69,11 @@ class AppPages {
   GetPage(
         name: _Paths.EDIT_PROFILE,
         page: () => EditProfile(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.PROFILE_PAGE,
+        page: () => ProfileScreenView(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
   ];

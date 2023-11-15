@@ -14,14 +14,15 @@ abstract class Routes {
   static const ADD_NEW_ACCOUNT = _Paths.ADD_NEW_ACCOUNT ;
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE ;
   static const NAVBAR = _Paths.NAVBAR ;
+  static const PROFILE_PAGE = _Paths.PROFILE_PAGE ;
 }
 
 abstract class _Paths {
   _Paths._();
   static const SPLASH_SCREEN = '/';
-  static const REGISTER_SCREEN = '/register-screen';
-  static const LOGIN_SCREEN = '/login-screen';
-  static const ONBOARDING_SCREEN = '/onboarding-screen';
+  static const REGISTER_SCREEN = '/register';
+  static const LOGIN_SCREEN = '/login';
+  static const ONBOARDING_SCREEN = '/onboarding';
   static const HOME_PAGE = '/home';
   static const DETAIL_BALANCE_PAGE = '/detail-balance';
   static const MANUAL_TRANSACTION  = '/manual-transaction';
@@ -30,6 +31,5 @@ abstract class _Paths {
   static const ADD_NEW_ACCOUNT  = '/add-new-account';
   static const EDIT_PROFILE  = '/edit-profile';
   static const NAVBAR  = '/navbar';
-
-
+  static const PROFILE_PAGE  = '/profile';
 }
