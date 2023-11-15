@@ -12,6 +12,8 @@ abstract class Routes {
   static const LIST_TRANSACTION = _Paths.LIST_TRANSACTION ;
   static const ADD_CASH_BALANCE = _Paths.ADD_CASH_BALANCE ;
   static const ADD_NEW_ACCOUNT = _Paths.ADD_NEW_ACCOUNT ;
+  static const EDIT_PROFILE = _Paths.EDIT_PROFILE ;
+  static const NAVBAR = _Paths.NAVBAR ;
 }
 
 abstract class _Paths {
@@ -26,5 +28,6 @@ abstract class _Paths {
   static const LIST_TRANSACTION  = '/list-transaction';
   static const ADD_CASH_BALANCE  = '/add-cash-balance';
   static const ADD_NEW_ACCOUNT  = '/add-new-account';
-
+  static const EDIT_PROFILE  = '/edit-profile';
+  static const NAVBAR  = '/navbar';
 }

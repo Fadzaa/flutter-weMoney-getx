@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/index.dart';
+import 'package:we_money_getx/app/initial_pages/navbar/navbar.dart';
 
 part 'app_routes.dart';
 
@@ -57,6 +58,11 @@ class AppPages {
     GetPage(
         name: _Paths.LIST_TRANSACTION,
         page: () => ListTransactionView(),
+        // binding: OnboardingScreenBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: _Paths.NAVBAR,
+        page: () => Navbar(),
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
   ];
