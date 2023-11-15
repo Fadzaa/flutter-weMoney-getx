@@ -28,5 +28,4 @@ abstract class _Paths {
   static const ADD_CASH_BALANCE  = '/add-cash-balance';
   static const ADD_NEW_ACCOUNT  = '/add-new-account';
   static const EDIT_PROFILE  = '/edit-profile';
-
 }
