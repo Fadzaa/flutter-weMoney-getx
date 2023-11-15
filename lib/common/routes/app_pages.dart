@@ -8,7 +8,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN_SCREEN;
+  static const INITIAL = Routes.SPLASH_SCREEN; // Ganti sesuai screen masing masing
 
   static final routes = [
     GetPage(
