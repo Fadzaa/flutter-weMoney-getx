@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/initial_pages/splash_screen/splash_screen_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 class LoginScreenView extends GetView<SplashScreenController> {
   const LoginScreenView({super.key});
@@ -117,7 +118,9 @@ class LoginScreenView extends GetView<SplashScreenController> {
                 width: double.infinity,
                 height: 45,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.HOME_PAGE);
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFF09ADFC),
                         shape: RoundedRectangleBorder(
@@ -261,7 +264,9 @@ class LoginScreenView extends GetView<SplashScreenController> {
                   ),
                 ),
 
-                TextButton(onPressed: () {},
+                TextButton(onPressed: () {
+                  Get.toNamed(Routes.REGISTER_SCREEN);
+                },
                     child: Text("Sign In",
                       style: GoogleFonts.poppins(
                         color: Color(0xFF09ADFC),
