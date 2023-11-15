@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:we_money_getx/common/helper/colors.dart';
 
 class ProfileScreenView extends StatelessWidget {
   const ProfileScreenView({Key? key}) : super(key: key);
@@ -15,15 +16,17 @@ class ProfileScreenView extends StatelessWidget {
               Container(
                 child: Image.asset("assets/Rectangle.png"),
               ),
-
               Column(
                 children: [
-                  SizedBox(height: 200,),
+                  SizedBox(
+                    height: 200,
+                  ),
                   Container(
                     alignment: Alignment.center,
-                    child: Image.asset("assets/profilepict.png"),
+                    child: Image.asset("assets/profile-edit.png",
+                    width: 120,
+                    height: 120,),
                   ),
-
                   SizedBox(height: 20),
                   Text(
                     "Alice Grace",
@@ -41,7 +44,7 @@ class ProfileScreenView extends StatelessWidget {
                   SizedBox(height: 25),
                   Container(
                     width: 305,
-                    height: 210,
+                    height: 275,
                     color: Colors.white,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -51,11 +54,38 @@ class ProfileScreenView extends StatelessWidget {
                             SizedBox(
                               width: 25,
                             ),
-                            Image.asset("assets/edit.png"),
+                            Icon(
+                              Icons.edit
+                            ),
                             SizedBox(width: 10),
-                            Text(
-                              "Edit Profile",
-                              style: GoogleFonts.poppins(),
+                            TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "Edit Profile",
+                                  style: GoogleFonts.poppins(
+                                      color: primaryTextColor,
+                                      fontWeight: FontWeight.w600),
+                                )),
+                          ],
+                        ),
+                        SizedBox(height: 15),
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 25,
+                            ),
+                            Icon(Icons.notifications),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text("Notifications", style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w600
+                            )),
+                            Spacer(),
+                            Switch(
+                              value: true,
+                              onChanged: (bool value) {
+                              },
                             ),
                           ],
                         ),
@@ -65,11 +95,19 @@ class ProfileScreenView extends StatelessWidget {
                             SizedBox(
                               width: 25,
                             ),
-                            Image.asset("assets/notifications.png"),
+                            Icon(
+                                Icons.security
+                            ),
                             SizedBox(
                               width: 10,
                             ),
-                            Text("Notifications", style: GoogleFonts.poppins()),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text("Security",
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                      color: primaryTextColor)),
+                            )
                           ],
                         ),
                         SizedBox(height: 15),
@@ -78,11 +116,19 @@ class ProfileScreenView extends StatelessWidget {
                             SizedBox(
                               width: 25,
                             ),
-                            Image.asset("assets/security.png"),
+                            Icon(
+                                Icons.chat
+                            ),
                             SizedBox(
                               width: 10,
                             ),
-                            Text("Security", style: GoogleFonts.poppins()),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text("Contact Us",
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                      color: primaryTextColor)),
+                            )
                           ],
                         ),
                         SizedBox(height: 15),
@@ -91,24 +137,19 @@ class ProfileScreenView extends StatelessWidget {
                             SizedBox(
                               width: 25,
                             ),
-                            Image.asset("assets/contact.png"),
+                            Icon(
+                                Icons.lock
+                            ),
                             SizedBox(
                               width: 10,
                             ),
-                            Text("Contact Us", style: GoogleFonts.poppins()),
-                          ],
-                        ),
-                        SizedBox(height: 15),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 25,
-                            ),
-                            Image.asset("assets/privacy.png"),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text("Privacy Policy", style: GoogleFonts.poppins()),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text("Privacy Policy",
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                      color: primaryTextColor)),
+                            )
                           ],
                         ),
                       ],
@@ -117,35 +158,33 @@ class ProfileScreenView extends StatelessWidget {
                   SizedBox(height: 15),
                 ],
               ),
-
             ],
           ),
-
-
-          
           Expanded(child: Container()),
-
-          Container(
-              width: 305,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white, // Background color
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: BorderSide(
-                      color: Colors.red, // Border color
+          Padding(
+            padding: const EdgeInsets.only(bottom: 83),
+            child: Container(
+                width: 305,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white, // Background color
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(
+                        color: Colors.red, // Border color
+                      ),
                     ),
                   ),
-                ),
-                child: Text(
-                  "LOG OUT",
-                  style: GoogleFonts.poppins(
-                    color: Colors.red,
+                  child: Text(
+                    "LOG OUT",
+                    style: GoogleFonts.poppins(
+                      color: Colors.red,
+                    ),
                   ),
-                ),
-              ))
+                )),
+          )
         ],
       ),
     );

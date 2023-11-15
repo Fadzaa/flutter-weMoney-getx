@@ -26,5 +26,4 @@ abstract class _Paths {
   static const LIST_TRANSACTION  = '/list-transaction';
   static const ADD_CASH_BALANCE  = '/add-cash-balance';
   static const ADD_NEW_ACCOUNT  = '/add-new-account';
-
 }
