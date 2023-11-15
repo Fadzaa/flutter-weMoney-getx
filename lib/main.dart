@@ -4,6 +4,8 @@ import 'package:we_money_getx/app/index.dart';
 import 'package:we_money_getx/app/profile_screen/profile_screen_view.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
+import 'app/profile_screen/profile_screen_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
