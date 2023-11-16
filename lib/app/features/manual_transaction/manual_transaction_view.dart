@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
+import 'package:we_money_getx/common/helper/text_formatting.dart';
 
 import '../../../common/helper/index.dart';
 
@@ -11,6 +12,7 @@ class ManualTransactionView extends GetView {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    TextEditingController _controller = TextEditingController();
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -64,19 +66,46 @@ class ManualTransactionView extends GetView {
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 20),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: "0.00",
-                                  hintStyle: tsPrimaryMedium.copyWith(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w600,
-                                      color: primaryColor),
-                                  border: InputBorder.none,
-                                ),
-                                style: tsPrimaryMedium.copyWith(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w600,
-                                    color: primaryColor),
+                              child: Stack(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 30),
+                                    child: TextField(
+                                      inputFormatters: [maskFormatter],
+                                      decoration: InputDecoration(
+                                        hintText: "0",
+                                        hintStyle: tsBalance.copyWith(
+                                          color: hintColor
+                                        ),
+                                        border: InputBorder.none,
+                                      ),
+                                      style: tsBalance,
+                                      onChanged: (value) {
+                                        if (value.length == 3 || value.length == 7) {
+                                          // Add a period after the third digit
+                                          maskFormatter.updateMask(mask: '#.###.###');
+                                          print(value);
+                                        } else if (value.length == 5 || value.length == 8){
+                                          // Allow only three digits before the period
+                                          maskFormatter.updateMask(mask: "##.###.###");
+                                        } else {
+                                          maskFormatter.updateMask(mask: "##.###.###");
+                                        }
+                                        // Get the current cursor position
+                                        // final cursorPosition = _controller.selection.start;
+                                        //
+                                        // // Set the cursor position after updating the mask
+                                        // _controller.selection = TextSelection.fromPosition(
+                                        //   TextPosition(offset: cursorPosition + 2),
+                                        // );
+                                      },
+                                    ),
+                                  ),
+                                  Positioned(
+                                    bottom: 5,
+                                      child: Text("IDR", style: tsHint.copyWith(fontSize: 16))
+                                  )
+                                ],
                               ),
                             ),
                           ],
