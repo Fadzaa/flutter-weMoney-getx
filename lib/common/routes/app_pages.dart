@@ -55,8 +55,8 @@ class AppPages {
     GetPage(
         name: _Paths.MANUAL_TRANSACTION,
         page: () => ManualTransactionView(),
-        // binding: ManualTransactionBinding(),
-        transition: Transition.upToDown
+        binding: ManualTransactionBinding(),
+        // transition: Transition.upToDown
   ),
     GetPage(
         name: _Paths.ADD_CASH_BALANCE,

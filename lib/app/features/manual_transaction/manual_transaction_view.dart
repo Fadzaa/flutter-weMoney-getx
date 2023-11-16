@@ -13,18 +13,19 @@ class ManualTransactionView extends GetView<ManualTransactionController> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    TextEditingController _controller = TextEditingController();
     final FocusNode focusNode = FocusNode();
 
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(18, 15, 18, 0),
+        padding: const EdgeInsets.fromLTRB(18, 15, 18,25),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+
           children: [
-            Center(child: Text("MANUAL TRANSACTION", style: tsHeading,)),
+            CommonAppBar(text: "MANUAL TRANSACTION", showIcon: false),
+
+            SizedBox(height: 25,),
 
             Container(
               width: width,
@@ -33,7 +34,7 @@ class ManualTransactionView extends GetView<ManualTransactionController> {
               ),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(4),
+                  borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: lineColor, width: 1)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,6 +204,21 @@ class ManualTransactionView extends GetView<ManualTransactionController> {
                 ],
               ),
             ),
+
+            Expanded(child: Container()),
+
+            ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  fixedSize: Size(width, 40),
+                  backgroundColor: primaryColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32),
+                  ),
+                ),
+                child: Text("Confirm", style: tsButton,)
+            )
+
 
 
           ],
