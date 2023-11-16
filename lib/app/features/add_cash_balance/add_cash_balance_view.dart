@@ -4,22 +4,22 @@ import 'package:we_money_getx/app/global_components/app_bar.dart';
 
 import '../../../common/helper/index.dart';
 
-class ManualTransactionView extends GetView {
-  const ManualTransactionView({super.key});
+class AddCashBalanceView extends StatelessWidget {
+  const AddCashBalanceView({super.key});
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(18, 15, 18, 0),
+        padding: EdgeInsets.fromLTRB(18, 15, 18, 15),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(child: Text("MANUAL TRANSACTION", style: tsHeading,)),
+            CommonAppBar(text: "ADD CASH BALANCE", showIcon: false),
+
+            SizedBox(height: 20,),
 
             Container(
               width: width,
@@ -63,21 +63,21 @@ class ManualTransactionView extends GetView {
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 20),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: "0.00",
-                                  hintStyle: tsPrimaryMedium.copyWith(
+                                padding: const EdgeInsets.symmetric(vertical: 20),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    hintText: "0.00",
+                                    hintStyle: tsPrimaryMedium.copyWith(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w600,
+                                        color: primaryColor),
+                                    border: InputBorder.none,
+                                  ),
+                                  style: tsPrimaryMedium.copyWith(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w600,
                                       color: primaryColor),
-                                  border: InputBorder.none,
-                                ),
-                                style: tsPrimaryMedium.copyWith(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w600,
-                                    color: primaryColor),
-                              ),
+                                )
                             ),
                           ],
                         ),
@@ -124,55 +124,58 @@ class ManualTransactionView extends GetView {
 
 
 
-                    Container(
-                      padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("CATEGORY",
-                                  style: tsPrimaryMedium.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                  )),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("CATEGORY",
+                                style: tsPrimaryMedium.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                )),
 
-                              SizedBox(
-                                width: 100,
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    hintText: "Select Category",
-                                    hintStyle: tsHint,
-                                    border: InputBorder.none,
-                                  ),
-                                  style: tsPrimaryMedium.copyWith(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      color: primaryColor),
-
+                            SizedBox(
+                              width: 100,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: "Select Category",
+                                  hintStyle: tsHint,
+                                  border: InputBorder.none,
                                 ),
-                              ),
-                            ],
-                          ),
+                                style: tsPrimaryMedium.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: primaryColor),
 
-                          Container(
-                            width: 15,
-                            height: 15,
-                            color: Colors.red,
-                          )
-                        ],
-                      ),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        Container(
+                          width: 15,
+                          height: 15,
+                          color: Colors.red,
+                        )
+                      ],
                     ),
+                  ),
 
                 ],
               ),
             ),
 
+            Expanded(child: Container(),),
+
+            ElevatedButton(onPressed: () {}, child: Text("Confirm"))
 
           ],
         ),
-      ),
+      )
     );
   }
 }

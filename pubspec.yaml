@@ -34,6 +34,7 @@ dependencies:
   google_fonts:
   introduction_screen: ^3.1.12
   flutter_svg: ^2.0.9
+  persistent_bottom_nav_bar: ^5.0.2
   mask_text_input_formatter: ^2.5.0
 
 
@@ -49,8 +50,8 @@ dev_dependencies:
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+#  # rules and activating additional ones.
+#  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

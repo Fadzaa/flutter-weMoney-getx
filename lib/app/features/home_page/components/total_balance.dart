@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 import '../../../../common/helper/index.dart';
 
@@ -46,22 +48,27 @@ class TotalBalance extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/details_balance.png",
-                            color: primaryColor,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "Details",
-                            style:
-                            tsPrimaryMedium.copyWith(fontSize: 8),
-                          ),
-                        ],
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed(Routes.DETAIL_BALANCE_PAGE);
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/details_balance.png",
+                              color: primaryColor,
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "Details",
+                              style:
+                              tsPrimaryMedium.copyWith(fontSize: 8),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
