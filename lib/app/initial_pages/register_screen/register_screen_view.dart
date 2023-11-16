@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:we_money_getx/app/initial_pages/splash_screen/splash_screen_controller.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../common/helper/index.dart';
 import '../../../common/routes/app_pages.dart';
 
@@ -14,44 +13,38 @@ class RegisterScreenView extends GetView<SplashScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(left: 24),
-
+        padding: const EdgeInsets.only(top: 34, left: 28, right: 28),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-              SizedBox(
-                height:34,
-              ),
-
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: Size(35, 35),
-                        backgroundColor:Color(0XFFDFDFDF)
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      child: Image.asset("assets/arrow-back.png"),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xFFDFDFDF),
+                      ),
                     ),
-                    child: null,
                   ),
-
-                  SizedBox(
-                    width: 93,
-                  ),
-
                   Image.asset("assets/logo.png"),
                 ],
               ),
 
               SizedBox(
-                height: 38,
+                height:45,
               ),
 
               Text("Sign Up to WeMoney",
-                style: GoogleFonts.montserrat(
+                style: GoogleFonts.poppins(
+                    color: Color(0xFF1F1F1F),
                     fontSize: 22,
                     fontWeight: FontWeight.w600
                 ),
@@ -61,20 +54,16 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 29,
               ),
 
-              Container(
-                width: 305,
+              SizedBox(
+                width: double.infinity,
                 height: 54,
                 child: TextField(
                   decoration: InputDecoration(
-                    // contentPadding: EdgeInsets.symmetric(horizontal: 22),
-                      prefixIcon: SvgPicture.asset('assets/person-icon.svg'),
-                      hintText: "Name",
-                      hintStyle: GoogleFonts.poppins(
-                        color: secondaryTextColor,
-                      ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(6)
-                      )
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    labelText: "Name",
+                    prefixIcon: Icon(Icons.account_circle_outlined),
                   ),
                 ),
               ),
@@ -83,19 +72,16 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 16,
               ),
 
-              Container(
-                width: 305,
+              SizedBox(
+                width: double.infinity,
                 height: 54,
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: SvgPicture.asset('assets/email-icon.svg'),
-                      hintText: "Email",
-                      hintStyle: GoogleFonts.poppins(
-                        color: secondaryTextColor,
-                      ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(6)
-                      )
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    labelText: "Email",
+                    prefixIcon: Icon(Icons.mail),
                   ),
                 ),
               ),
@@ -104,39 +90,17 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 16,
               ),
 
-              Container(
-                width: 305,
+              SizedBox(
+                width: double.infinity,
                 height: 54,
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: SvgPicture.asset('assets/lock-icon.svg'),
-                      hintText: "Password",
-                      hintStyle: GoogleFonts.poppins(
-                        color: secondaryTextColor,
-                      ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(6)
-                      )
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    labelText: "Password",
+                    prefixIcon: Icon(Icons.lock),
                   ),
-                ),
-              ),
-
-              SizedBox(
-                height: 11,
-              ),
-
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text("Forget Password?",
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 13,
-                          color: primaryColor
-                      ),),
-                  ],
                 ),
               ),
 
@@ -144,20 +108,29 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 21,
               ),
 
-              ElevatedButton(onPressed: (){
-                Get.toNamed(Routes.HOME_PAGE);
-
-              },
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(305, 45),
-                      backgroundColor: primaryColor
+              Center(
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 45,
+                  child: ElevatedButton
+                    (onPressed: (){
+                    Get.toNamed(Routes.NAVBAR);
+                    },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: primaryColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular((10))
+                          ),
+                      ),
+                      child: Text(
+                        "Sign Up",
+                        style: GoogleFonts.poppins(
+                          color: whiteTextColor,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
                   ),
-                  child: Text(
-                    "Sign Up",
-                    style: GoogleFonts.poppins(
-                        color: whiteTextColor
-                    ),
-                  )
+                ),
               ),
 
               SizedBox(
@@ -184,66 +157,74 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 height: 41,
               ),
 
-              ElevatedButton(onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(302, 53),
-                      backgroundColor: Colors.white
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset("assets/google-icon.svg",
-                          width: 29,
-                          height: 29
-                      ),
-
-                      SizedBox(
-                        width: 16,
-                      ),
-
-                      Text(
-                        "Sign In with Google",
-                        style: GoogleFonts.poppins(
-                            color: primaryTextColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600
+              SizedBox(
+                width: double.infinity,
+                height: 60,
+                child: ElevatedButton(
+                    onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                      ),
-                    ],
-                  )
+                        elevation: 5,
+                        shadowColor: Colors.black
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset("assets/google-icon.svg"),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Text(
+                          "Sign Up with Google",
+                          style: GoogleFonts.poppins(
+                              color: primaryTextColor,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      ],
+                    )
+                ),
               ),
 
               SizedBox(
                 height: 15,
               ),
 
-              ElevatedButton(onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(302, 53),
-                      backgroundColor: Colors.white
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset("assets/fb-icon.svg",
-                          width: 29,
-                          height: 29
-                      ),
-
-                      SizedBox(
-                        width: 16,
-                      ),
-
-                      Text(
-                        "Sign In with Facebook",
-                        style: GoogleFonts.poppins(
-                            color: primaryTextColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600
+              SizedBox(
+                width: double.infinity,
+                height: 60,
+                child: ElevatedButton(
+                    onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                      ),
-                    ],
-                  )
+                        elevation: 5,
+                        shadowColor: Colors.black
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset("assets/fb-icon.svg"),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Text(
+                          "Sign Up with Facebook",
+                          style: GoogleFonts.poppins(
+                              color: primaryTextColor,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      ],
+                    )
+                ),
               ),
 
               SizedBox(
@@ -253,25 +234,24 @@ class RegisterScreenView extends GetView<SplashScreenController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Already have an account? Sign In",
+                  Text(
+                    "Already have an account? ",
                     style: GoogleFonts.poppins(
+                      color: primaryTextColor,
                         fontWeight: FontWeight.w500,
-                        fontSize: 10
+                        fontSize: 13
                     ),
                   ),
 
-                  SizedBox(width: 5,),
-
-                  InkWell(
-                    onTap: () {
-                      Get.toNamed(Routes.LOGIN_SCREEN);
-
-                    },
-                    child: Text("Sign In",
+                  TextButton(onPressed: () {
+                    Get.toNamed(Routes.LOGIN_SCREEN);
+                  },
+                    child: Text(
+                      "Sign In",
                       style: GoogleFonts.poppins(
                         color: primaryColor,
                         fontWeight: FontWeight.w600,
-                        fontSize: 10
+                        fontSize: 13
                       ),
                     ),
                   ),

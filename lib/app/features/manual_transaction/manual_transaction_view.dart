@@ -19,7 +19,7 @@ class ManualTransactionView extends GetView {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const CommonAppBar(text: "MANUAL TRANSACTION", showIcon: false,),
+            Center(child: Text("MANUAL TRANSACTION", style: tsHeading,)),
 
             Container(
               width: width,
