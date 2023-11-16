@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 class ProfileScreenView extends StatelessWidget {
   const ProfileScreenView({Key? key}) : super(key: key);
@@ -59,7 +61,9 @@ class ProfileScreenView extends StatelessWidget {
                             ),
                             SizedBox(width: 10),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Get.toNamed(Routes.EDIT_PROFILE);
+                                },
                                 child: Text(
                                   "Edit Profile",
                                   style: GoogleFonts.poppins(
