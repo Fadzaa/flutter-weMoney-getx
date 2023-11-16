@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_controller.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 import 'package:we_money_getx/common/helper/text_formatting.dart';
 
 import '../../../common/helper/index.dart';
 
-class ManualTransactionView extends GetView {
+class ManualTransactionView extends GetView<ManualTransactionController> {
   const ManualTransactionView({super.key});
 
   @override
@@ -13,6 +15,7 @@ class ManualTransactionView extends GetView {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     TextEditingController _controller = TextEditingController();
+    final FocusNode focusNode = FocusNode();
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -69,9 +72,11 @@ class ManualTransactionView extends GetView {
                               child: Stack(
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 30),
+                                    padding: const EdgeInsets.only(left: 34),
                                     child: TextField(
+                                      focusNode: focusNode,
                                       inputFormatters: [maskFormatter],
+                                      showCursor: false,
                                       decoration: InputDecoration(
                                         hintText: "0",
                                         hintStyle: tsBalance.copyWith(
@@ -85,11 +90,13 @@ class ManualTransactionView extends GetView {
                                           // Add a period after the third digit
                                           maskFormatter.updateMask(mask: '#.###.###');
                                           print(value);
-                                        } else if (value.length == 5 || value.length == 8){
+                                        } else if (value.length == 5 || value.length == 9){
                                           // Allow only three digits before the period
                                           maskFormatter.updateMask(mask: "##.###.###");
-                                        } else {
-                                          maskFormatter.updateMask(mask: "##.###.###");
+                                        } else if (value.length == 0) {
+                                          maskFormatter.updateMask(mask: "#");
+                                        }else {
+                                          maskFormatter.updateMask(mask: "###.###.###");
                                         }
                                         // Get the current cursor position
                                         // final cursorPosition = _controller.selection.start;
@@ -102,8 +109,12 @@ class ManualTransactionView extends GetView {
                                     ),
                                   ),
                                   Positioned(
-                                    bottom: 5,
-                                      child: Text("IDR", style: tsHint.copyWith(fontSize: 16))
+                                    bottom: 14,
+                                      child: Text("IDR",
+                                          style: tsHint.copyWith(
+                                              fontSize: 16,
+                                            color: controller.focusNode.hasFocus ? primaryTextColor : hintColor
+                                          ))
                                   )
                                 ],
                               ),
@@ -130,15 +141,14 @@ class ManualTransactionView extends GetView {
                             )),
 
                         TextField(
+                          textCapitalization: TextCapitalization.characters,
                           decoration: InputDecoration(
                             hintText: "Fill Transaction Name",
                             hintStyle: tsHint,
                             border: InputBorder.none,
                           ),
-                          style: tsPrimaryMedium.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: primaryColor),
+
+                          style: tsCommonHeadingList,
 
                         ),
                       ],
@@ -170,25 +180,21 @@ class ManualTransactionView extends GetView {
                               SizedBox(
                                 width: 100,
                                 child: TextField(
+                                  readOnly: true,
                                   decoration: InputDecoration(
                                     hintText: "Select Category",
                                     hintStyle: tsHint,
                                     border: InputBorder.none,
                                   ),
-                                  style: tsPrimaryMedium.copyWith(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      color: primaryColor),
+
 
                                 ),
                               ),
                             ],
                           ),
 
-                          Container(
-                            width: 15,
-                            height: 15,
-                            color: Colors.red,
+                          InkWell(
+                              child: SvgPicture.asset("assets/icon/icon_arrow_down.svg")
                           )
                         ],
                       ),
