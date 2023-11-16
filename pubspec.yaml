@@ -35,6 +35,7 @@ dependencies:
   introduction_screen: ^3.1.12
   flutter_svg: ^2.0.9
   persistent_bottom_nav_bar: ^5.0.2
+  mask_text_input_formatter: ^2.5.0
 
 
   # The following adds the Cupertino Icons font to your application.
