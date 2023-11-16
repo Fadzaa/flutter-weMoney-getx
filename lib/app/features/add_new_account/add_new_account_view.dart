@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 
 class AddNewAccountView extends StatelessWidget {

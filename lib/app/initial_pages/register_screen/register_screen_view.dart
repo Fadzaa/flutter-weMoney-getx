@@ -34,7 +34,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                       ),
                     ),
                   ),
-                  Image.asset("assets/logo_app.png"),
+                  Image.asset("assets/logo.png"),
                 ],
               ),
 

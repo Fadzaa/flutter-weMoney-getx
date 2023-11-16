@@ -21,9 +21,9 @@ class Navbar extends StatelessWidget {
     List<Widget> _buildScreens() {
       return [
         HomePageView(),
-        EditProfile(),
+        Container(child: Center(child: Text("Insight Page"),),),
         ManualTransactionView(),
-        DetailBalanceView(),
+        Container(child: Center(child: Text("Saving Page"),),),
         ProfileScreenView(),
       ];
     }
