@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
@@ -6,7 +7,16 @@ import '../../../../common/helper/index.dart';
 
 
 class TotalBalance extends StatelessWidget {
-  const TotalBalance({super.key});
+  const TotalBalance({
+    required this.icon,
+    required this.iconText,
+    required this.route,
+    super.key
+  });
+
+  final String icon;
+  final String iconText;
+  final String route;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +29,9 @@ class TotalBalance extends StatelessWidget {
         vertical: 15,
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: lineColor, width: 1)
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(4),
+          border: Border.all(color: lineColor, width: 1)
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,20 +60,20 @@ class TotalBalance extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Get.toNamed(Routes.DETAIL_BALANCE_PAGE);
+                          Get.toNamed(route);
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              "assets/details_balance.png",
+                            SvgPicture.asset(
+                              icon,
                               color: primaryColor,
                             ),
                             SizedBox(
                               height: 5,
                             ),
                             Text(
-                              "Details",
+                              iconText,
                               style:
                               tsPrimaryMedium.copyWith(fontSize: 8),
                             ),

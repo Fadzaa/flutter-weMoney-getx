@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:we_money_getx/app/features/home_page/components/balance_overview.dart';
 import 'package:we_money_getx/app/features/home_page/components/list_transaction.dart';
 import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 import '../../../common/helper/index.dart';
 
@@ -62,7 +63,7 @@ class HomePageView extends GetView {
             ),
 
             //Total Balance
-            const TotalBalance(),
+             TotalBalance(icon: "assets/icon/icon_details_balance.svg", iconText: "Details", route: Routes.DETAIL_BALANCE_PAGE,),
 
             //Balance Used and Limit Balance
             const BalanceOverview(),

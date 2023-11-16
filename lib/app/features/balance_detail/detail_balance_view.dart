@@ -7,6 +7,7 @@ import 'package:we_money_getx/app/features/home_page/components/balance_overview
 import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 import 'package:we_money_getx/common/helper/index.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 class DetailBalanceView extends GetView {
   const DetailBalanceView({super.key});
@@ -26,7 +27,7 @@ class DetailBalanceView extends GetView {
 
             SizedBox(height: 15,),
 
-            const TotalBalance(),
+            TotalBalance(icon: "assets/icon/icon_add_balance.svg", iconText: "Add Balance", route: Routes.ADD_CASH_BALANCE,),
 
             SizedBox(height: 25,),
 
