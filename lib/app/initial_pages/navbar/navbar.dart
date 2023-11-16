@@ -6,6 +6,7 @@ import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/features/home_page/home_page_view.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_view.dart';
 import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
+import 'package:we_money_getx/app/features/saving_page/saving_page_view.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
 import 'package:we_money_getx/common/helper/index.dart';
 
@@ -23,7 +24,7 @@ class Navbar extends StatelessWidget {
         HomePageView(),
         Container(child: Center(child: Text("Insight Page"),),),
         ManualTransactionView(),
-        Container(child: Center(child: Text("Saving Page"),),),
+        SavingPage(),
         ProfileScreenView(),
       ];
     }
