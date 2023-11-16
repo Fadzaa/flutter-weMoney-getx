@@ -142,7 +142,7 @@ Widget accountList(
       children: [
         Row(
           children: [
-            Image.asset(icon),
+            Image.asset(icon, width: 30, height: 30,),
             SizedBox(
               width: 6,
             ),
