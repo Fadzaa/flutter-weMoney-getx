@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
+import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
