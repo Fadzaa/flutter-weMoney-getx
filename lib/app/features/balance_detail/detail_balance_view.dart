@@ -5,6 +5,7 @@ import 'package:we_money_getx/app/features/balance_detail/components/connect_acc
 import 'package:we_money_getx/app/features/balance_detail/components/set_balance_limit.dart';
 import 'package:we_money_getx/app/features/home_page/components/balance_overview.dart';
 import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
+import 'package:we_money_getx/app/global_components/app_bar.dart';
 import 'package:we_money_getx/common/helper/index.dart';
 
 class DetailBalanceView extends GetView {
@@ -18,16 +19,9 @@ class DetailBalanceView extends GetView {
         padding: const EdgeInsets.fromLTRB(18, 25, 18, 0),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SvgPicture.asset("assets/icon_arrow_back.svg"),
-
-                Text("DETAIL BALANCE", style: tsHeading,),
-
-                const SizedBox()
-
-              ],
+            CommonAppBar(
+                text: "DETAIL BALANCE",
+                showIcon: false
             ),
 
             SizedBox(height: 15,),

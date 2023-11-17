@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 import '../../../../common/helper/index.dart';
 
@@ -58,15 +60,20 @@ class ConnectAccount extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Center(
-                      child: Column(
-                        children: [
-                          SvgPicture.asset("assets/icon_add_card.svg"),
-                          Text("Add New Account", style: tsPrimaryMedium.copyWith(
-                            fontSize: 8,
-                            fontWeight: FontWeight.w600
-                          ),),
+                      child: InkWell(
+                        onTap: () {
+                          Get.toNamed(Routes.ADD_NEW_ACCOUNT);
+                        },
+                        child: Column(
+                          children: [
+                            SvgPicture.asset("assets/icon_add_card.svg"),
+                            Text("Add New Account", style: tsPrimaryMedium.copyWith(
+                              fontSize: 8,
+                              fontWeight: FontWeight.w600
+                            ),),
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   )

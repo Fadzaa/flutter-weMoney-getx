@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
 
@@ -63,7 +64,216 @@ class SavingPage extends StatelessWidget {
 
                       Spacer(),
 
-                      GestureDetector(
+                      InkWell(
+                        onTap: (){
+                          Get.dialog(
+                            Dialog(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)
+                              ),
+                             child: Container(
+                               height: 515,
+                               decoration: BoxDecoration(
+                                 color: Colors.white,
+                                 borderRadius: BorderRadius.circular(20)
+                               ),
+                               child: Padding(
+                                 padding: const EdgeInsets.symmetric(horizontal: 20, ),
+                                 child: Column(
+                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                   children: [
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(top: 10),
+                                       child: IconButton(onPressed: (){}, icon: Icon(Icons.close)),
+                                     ),
+
+                                     Center(
+                                       child: Text(
+                                         "Add Task",
+                                         style: GoogleFonts.poppins(
+                                           color: Color(0xFF1F1F1F),
+                                           fontWeight: FontWeight.w600,
+                                           fontSize: 19,
+                                         ),
+                                       ),
+                                     ),
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(top: 24),
+                                       child: Text(
+                                         "Title",
+                                         style: GoogleFonts.poppins(
+                                           color: Color(0xFF1F1F1F),
+                                           fontWeight: FontWeight.w600,
+                                           fontSize: 15,
+                                         ),
+                                       ),
+                                     ),
+
+                                     SizedBox(
+                                       width: 305,
+                                       height: 54,
+                                       child: TextField(
+                                         decoration: InputDecoration(
+                                           border: OutlineInputBorder(
+                                               borderRadius: BorderRadius.circular(10)
+                                           ),
+                                           labelText: "Enter Title",
+                                         ),
+                                       ),
+                                     ),
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(top: 10),
+                                       child: Text(
+                                         "Note",
+                                         style: GoogleFonts.poppins(
+                                           color: Color(0xFF1F1F1F),
+                                           fontWeight: FontWeight.w600,
+                                           fontSize: 15,
+                                         ),
+                                       ),
+                                     ),
+
+                                     SizedBox(
+                                       width: 305,
+                                       height: 54,
+                                       child: TextField(
+                                         decoration: InputDecoration(
+                                           border: OutlineInputBorder(
+                                               borderRadius: BorderRadius.circular(10)
+                                           ),
+                                           labelText: "Enter Note Here",
+                                         ),
+                                       ),
+                                     ),
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(top: 10),
+                                       child: Text(
+                                         "Date",
+                                         style: GoogleFonts.poppins(
+                                           color: Color(0xFF1F1F1F),
+                                           fontWeight: FontWeight.w600,
+                                           fontSize: 15,
+                                         ),
+                                       ),
+                                     ),
+
+                                     SizedBox(
+                                       width: 305,
+                                       height: 54,
+                                       child: TextField(
+                                         decoration: InputDecoration(
+                                           border: OutlineInputBorder(
+                                               borderRadius: BorderRadius.circular(10)
+                                           ),
+                                           labelText: "Enter Date",
+                                         ),
+                                       ),
+                                     ),
+
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(top: 10),
+                                       child: Row(
+                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                         children: [
+                                           Text(
+                                             "Start Time",
+                                             style: GoogleFonts.poppins(
+                                               color: Color(0xFF1F1F1F),
+                                               fontWeight: FontWeight.w600,
+                                               fontSize: 15,
+                                             ),
+                                           ),
+
+                                           Text(
+                                             "End Time",
+                                             style: GoogleFonts.poppins(
+                                               color: Color(0xFF1F1F1F),
+                                               fontWeight: FontWeight.w600,
+                                               fontSize: 15,
+                                             ),
+                                           ),
+                                           Container(
+
+                                           ),
+                                         ],
+                                       ),
+                                     ),
+
+
+                                     Row(
+                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                       children: [
+                                         SizedBox(
+                                           width: 115,
+                                           height: 40,
+                                           child: TextField(
+                                             decoration: InputDecoration(
+                                               border: OutlineInputBorder(
+                                                   borderRadius: BorderRadius.circular(10)
+                                               ),
+                                               labelText: "enter time",
+                                               suffixIcon: Icon(Icons.schedule),
+                                             ),
+                                           ),
+                                         ),
+
+                                         SizedBox(
+                                           width: 115,
+                                           height: 40,
+                                           child: TextField(
+                                             decoration: InputDecoration(
+                                               border: OutlineInputBorder(
+                                                   borderRadius: BorderRadius.circular(10)
+                                               ),
+                                               labelText: "enter time",
+                                               suffixIcon: Icon(Icons.schedule),
+                                             ),
+                                           ),
+                                         ),
+                                         Container(
+
+                                         )
+                                       ],
+                                     ),
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(top: 20),
+                                       child: Center(
+                                         child: SizedBox(
+                                           width: 171,
+                                           height: 45,
+                                           child: ElevatedButton(
+                                               onPressed: () {
+                                               },
+                                               style: ElevatedButton.styleFrom(
+                                                   backgroundColor: Color(0xFF09ADFC),
+                                                   shape: RoundedRectangleBorder(
+                                                       borderRadius: BorderRadius.circular(10))),
+                                               child: Text(
+                                                 "Add Task",
+                                                 style: GoogleFonts.poppins(
+                                                   color: Colors.white,
+                                                   fontWeight: FontWeight.w600,
+                                                   fontSize: 14,
+                                                 ),
+                                               )),
+                                         ),
+                                       ),
+                                     ),
+
+
+                                   ],
+                                 ),
+                               ),
+                             ),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: 114,
                           height: 46,
