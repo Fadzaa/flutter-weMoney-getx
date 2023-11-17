@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:we_money_getx/app/features/balance_detail/detail_balance_view.dart';
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/features/home_page/home_page_view.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_view.dart';
 import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
+import 'package:we_money_getx/app/features/saving_page/saving_page_view.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
 import 'package:we_money_getx/common/helper/index.dart';
+import 'package:we_money_getx/common/routes/app_pages.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -22,8 +25,8 @@ class Navbar extends StatelessWidget {
       return [
         HomePageView(),
         Container(child: Center(child: Text("Insight Page"),),),
-        ManualTransactionView(),
-        Container(child: Center(child: Text("Saving Page"),),),
+        Container(),
+        SavingPage(),
         ProfileScreenView(),
       ];
     }
@@ -49,7 +52,10 @@ class Navbar extends StatelessWidget {
         ),
         PersistentBottomNavBarItem(
           icon: SvgPicture.asset("assets/icon/icon_plus.svg"),
-          activeColorPrimary: primaryColor
+          activeColorPrimary: primaryColor,
+          onPressed: (context) {
+            Get.toNamed(Routes.MANUAL_TRANSACTION);
+          },
         ),
         PersistentBottomNavBarItem(
           icon: SvgPicture.asset("assets/icon/icon_saving_active.svg"),

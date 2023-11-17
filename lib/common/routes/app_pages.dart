@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
+import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_binding.dart';
+import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_controller.dart';
 import 'package:we_money_getx/app/features/saving_page/saving_page_view.dart';
 import 'package:we_money_getx/app/index.dart';
 import 'package:we_money_getx/app/initial_pages/navbar/navbar.dart';
@@ -10,7 +12,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SAVING_PAGE; // Ganti sesuai screen masing masing
+  static const INITIAL = Routes.SPLASH_SCREEN; // Ganti sesuai screen masing masing
 
   static final routes = [
     GetPage(
@@ -53,8 +55,8 @@ class AppPages {
     GetPage(
         name: _Paths.MANUAL_TRANSACTION,
         page: () => ManualTransactionView(),
-        // binding: OnboardingScreenBinding(),
-        // transition: Transition.noTransition
+        binding: ManualTransactionBinding(),
+        // transition: Transition.upToDown
   ),
     GetPage(
         name: _Paths.ADD_CASH_BALANCE,
@@ -77,6 +79,9 @@ class AppPages {
     GetPage(
         name: _Paths.NAVBAR,
         page: () => Navbar(),
+      bindings: [
+        ManualTransactionBinding(),
+      ]
   ),
   GetPage(
         name: _Paths.EDIT_PROFILE,
@@ -89,7 +94,6 @@ class AppPages {
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
         // transition: Transition.noTransition
-
     GetPage(
         name: _Paths.PROFILE_PAGE,
         page: () => ProfileScreenView(),

@@ -14,7 +14,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 34, left: 28, right: 28),
+        padding: const EdgeInsets.only(top: 3, left: 28, right: 28),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -35,6 +35,9 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                     ),
                   ),
                   Image.asset("assets/logo.png"),
+                  Container(
+
+                  ),
                 ],
               ),
 
