@@ -34,4 +34,5 @@ abstract class _Paths {
   static const NAVBAR  = '/navbar';
   static const PROFILE_PAGE  = '/profile';
   static const SAVING_PAGE  = '/saving-page';
+  static const PRIVACY_POLICY = '/privacy-policy';
 }
