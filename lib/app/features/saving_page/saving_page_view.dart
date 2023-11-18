@@ -4,6 +4,9 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:we_money_getx/common/helper/colors.dart';
 
+import '../../model/DataItem.dart';
+import '../../model/Todo.dart';
+
 class SavingPage extends StatelessWidget {
   const SavingPage({Key? key}) : super(key: key);
 
@@ -11,6 +14,42 @@ class SavingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+
+    List<Todo> todos = [
+      Todo(
+        title: "Meeting 1",
+        time: "02.04 PM - 02.20 PM",
+        note: "Discuss project updates",
+      ),
+      Todo(
+        title: "Meeting 2",
+        time: "03.30 PM - 04.00 PM",
+        note: "Planning for next sprint",
+      ),
+      Todo(
+        title: "Task 3",
+        time: "05.00 PM - 05.30 PM",
+        note: "Review code changes",
+      ),
+      Todo(
+        title: "Task 4",
+        time: "05.00 PM - 05.30 PM",
+        note: "Review code changes",
+      ),
+      Todo(
+        title: "Task 5",
+        time: "05.00 PM - 05.30 PM",
+        note: "Review code changes",
+      ),
+    ];
+
+    List<DateItem> dateItems = [
+      DateItem(month: "Nov", day: "25", dayOfWeek: "WED"),
+      DateItem(month: "Nov", day: "26", dayOfWeek: "THU"),
+      DateItem(month: "Nov", day: "27", dayOfWeek: "FRI"),
+      DateItem(month: "Nov", day: "28", dayOfWeek: "SAT"),
+      DateItem(month: "Nov", day: "29", dayOfWeek: "SUN"),
+    ];
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -314,6 +353,7 @@ class SavingPage extends StatelessWidget {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
+                    DateItem dateItem = dateItems[index];
                     return Container(
                       width: 103,
                       height:110,
@@ -332,19 +372,25 @@ class SavingPage extends StatelessWidget {
                       ),// Set a fixed width for the container
                       child: Column(
                         children: [
-                          Text("Nov", style: GoogleFonts.poppins(
+                          Text(
+                            dateItem.month,
+                            style: GoogleFonts.poppins(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
                             color: index == 0 ? Colors.white : primaryTextColor,
                           ),),
                           SizedBox(height: 8,),
-                          Text("25", style: GoogleFonts.poppins(
+                          Text(
+                            dateItem.day,
+                            style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                             color: index == 0 ? Colors.white : primaryTextColor,
                           ),),
                           SizedBox(height: 6,),
-                          Text("WED", style: GoogleFonts.poppins(
+                          Text(
+                            dateItem.dayOfWeek,
+                            style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                             color: index == 0 ? Colors.white : primaryTextColor,
@@ -357,14 +403,14 @@ class SavingPage extends StatelessWidget {
               ),
 
               Container(
-                
                 margin: EdgeInsets.only(top: 4),
-                height: 495,
+                height: 450,
                 child: ListView.builder(
-                  itemCount: 3,
+                  itemCount: 5,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
+                    Todo todo = todos[index];
                     return Container(
                       width: 334,
                       height:113,
@@ -385,7 +431,9 @@ class SavingPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Title", style: GoogleFonts.poppins(
+                            Text(
+                              todo.title,
+                              style: GoogleFonts.poppins(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
                               color: index == 0 ? Colors.white: primaryTextColor,
@@ -398,17 +446,21 @@ class SavingPage extends StatelessWidget {
                                   child: Icon(Icons.schedule,
                                       color: index == 0 ? Colors.white: primaryTextColor,),
                                 ),
-                                Text("02.04 PM - 02.20 PM", style: GoogleFonts.poppins(
+                                Text(
+                                  todo.time,
+                                  style: GoogleFonts.poppins(
                                   fontSize: 12,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   color: index == 0 ? Colors.white: primaryTextColor,
                                 ),),
                               ],
                             ),
                             SizedBox(height: 15,),
-                            Text("note1", style: GoogleFonts.poppins(
+                            Text(
+                              todo.note,
+                              style: GoogleFonts.poppins(
                               fontSize: 15,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
                               color: index == 0 ? Colors.white: primaryTextColor,
                             ),),
                           ],
