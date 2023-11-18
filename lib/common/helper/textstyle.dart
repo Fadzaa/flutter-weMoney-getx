@@ -105,3 +105,20 @@ TextStyle tsHeadingPP = GoogleFonts.montserrat(
         fontWeight: FontWeight.w600
     )
 );
+
+TextStyle tsProfileName = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 20,
+        color: primaryTextColor,
+        fontWeight: FontWeight.bold
+    )
+);
+
+TextStyle tsProfile = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 14,
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600
+    )
+);
+
