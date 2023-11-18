@@ -105,20 +105,3 @@ TextStyle tsHeadingPP = GoogleFonts.montserrat(
         fontWeight: FontWeight.w600
     )
 );
-
-
-TextStyle tsTextPP = GoogleFonts.montserrat(
-    textStyle: const TextStyle(
-        fontSize: 14,
-        color: primaryTextColor,
-        fontWeight: FontWeight.normal
-    )
-);
-
-TextStyle tsHeadingPP = GoogleFonts.montserrat(
-    textStyle: const TextStyle(
-        fontSize: 16,
-        color: primaryTextColor,
-        fontWeight: FontWeight.w600
-    )
-);
