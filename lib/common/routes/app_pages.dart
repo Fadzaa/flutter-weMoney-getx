@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
+import 'package:we_money_getx/app/features/profile_screen/privacy-policy.dart';
 import 'package:we_money_getx/app/index.dart';
 import 'package:we_money_getx/app/initial_pages/navbar/navbar.dart';
 import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
@@ -89,6 +90,5 @@ class AppPages {
         // binding: OnboardingScreenBinding(),
         // transition: Transition.noTransition
   ),
-
   ];
 }
