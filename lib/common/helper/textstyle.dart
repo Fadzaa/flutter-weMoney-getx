@@ -83,6 +83,13 @@ TextStyle tsHint = GoogleFonts.montserrat(
     )
 );
 
+TextStyle tsButton = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 18,
+        color: Colors.white,
+        fontWeight: FontWeight.w600
+    )
+);
 TextStyle tsTextPP = GoogleFonts.montserrat(
     textStyle: const TextStyle(
         fontSize: 14,
