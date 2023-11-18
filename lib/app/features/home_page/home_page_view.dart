@@ -24,14 +24,14 @@ class HomePageView extends GetView {
           children: [
             //Heading Section
             Container(
-              width: width * 0.93,
+              width: width,
               height: height * 0.0875,
               padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
               decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(16),
-                    bottomRight: Radius.circular(16)),
+                // borderRadius: BorderRadius.only(
+                //     topRight: Radius.circular(16),
+                //     bottomRight: Radius.circular(16)),
               ),
               child: Row(
                 children: [
@@ -62,11 +62,19 @@ class HomePageView extends GetView {
               ),
             ),
 
+            // SizedBox(height: 30,),
+
             //Total Balance
-             TotalBalance(icon: "assets/icon/icon_details_balance.svg", iconText: "Details", route: Routes.DETAIL_BALANCE_PAGE,),
+             Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 0),
+               child: TotalBalance(icon: "assets/icon/icon_details_balance.svg", iconText: "Details", route: Routes.DETAIL_BALANCE_PAGE,),
+             ),
 
             //Balance Used and Limit Balance
-            const BalanceOverview(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 30),
+              child: const BalanceOverview(),
+            ),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
