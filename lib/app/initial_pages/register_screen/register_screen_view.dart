@@ -63,7 +63,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(10)
                     ),
                     labelText: "Name",
                     prefixIcon: Icon(Icons.account_circle_outlined),
@@ -118,12 +118,12 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                   child: ElevatedButton
                     (onPressed: (){
                     Get.toNamed(Routes.NAVBAR);
-                    },
+                  },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: primaryColor,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular((10))
-                          ),
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular((10))
+                        ),
                       ),
                       child: Text(
                         "Sign Up",
@@ -240,7 +240,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                   Text(
                     "Already have an account? ",
                     style: GoogleFonts.poppins(
-                      color: primaryTextColor,
+                        color: primaryTextColor,
                         fontWeight: FontWeight.w500,
                         fontSize: 13
                     ),
@@ -252,9 +252,9 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                     child: Text(
                       "Sign In",
                       style: GoogleFonts.poppins(
-                        color: primaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13
+                          color: primaryColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13
                       ),
                     ),
                   ),
