@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
-
 import 'package:syncfusion_flutter_core/theme.dart';
 
 import '../../../../common/helper/index.dart';

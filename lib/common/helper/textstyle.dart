@@ -106,4 +106,50 @@ TextStyle tsHeadingPP = GoogleFonts.montserrat(
     )
 );
 
+TextStyle tsProfileName = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 20,
+        color: primaryTextColor,
+        fontWeight: FontWeight.bold
+    )
+);
 
+TextStyle tsProfile = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 14,
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600
+    )
+);
+
+TextStyle tsSign = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 22,
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600
+    )
+);
+
+TextStyle tsSignin = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        fontSize: 15,
+        color: whiteTextColor,
+        fontWeight: FontWeight.w600
+    )
+);
+
+TextStyle tsSignUpWith = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontSize: 15,
+        fontWeight: FontWeight.w600
+    )
+);
+
+TextStyle tsPrimary = GoogleFonts.montserrat(
+    textStyle: const TextStyle(
+        color: primaryColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 13
+    )
+);
