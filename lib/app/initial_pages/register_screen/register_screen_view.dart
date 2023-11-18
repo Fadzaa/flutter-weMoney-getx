@@ -46,11 +46,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
               ),
 
               Text("Sign Up to WeMoney",
-                style: GoogleFonts.poppins(
-                    color: Color(0xFF1F1F1F),
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600
-                ),
+                style: tsSign
               ),
 
               SizedBox(
@@ -63,7 +59,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(10)
                     ),
                     labelText: "Name",
                     prefixIcon: Icon(Icons.account_circle_outlined),
@@ -118,19 +114,16 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                   child: ElevatedButton
                     (onPressed: (){
                     Get.toNamed(Routes.NAVBAR);
-                    },
+                  },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: primaryColor,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular((10))
-                          ),
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular((10))
+                        ),
                       ),
                       child: Text(
                         "Sign Up",
-                        style: GoogleFonts.poppins(
-                          color: whiteTextColor,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: tsSignin
                       )
                   ),
                 ),
@@ -182,11 +175,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                         ),
                         Text(
                           "Sign Up with Google",
-                          style: GoogleFonts.poppins(
-                              color: primaryTextColor,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600
-                          ),
+                          style: tsHeadingPP
                         ),
                       ],
                     )
@@ -219,11 +208,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                         ),
                         Text(
                           "Sign Up with Facebook",
-                          style: GoogleFonts.poppins(
-                              color: primaryTextColor,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600
-                          ),
+                          style: tsSignUpWith
                         ),
                       ],
                     )
@@ -239,11 +224,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                 children: [
                   Text(
                     "Already have an account? ",
-                    style: GoogleFonts.poppins(
-                      color: primaryTextColor,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13
-                    ),
+                    style: tsHeading
                   ),
 
                   TextButton(onPressed: () {
@@ -251,11 +232,7 @@ class RegisterScreenView extends GetView<SplashScreenController> {
                   },
                     child: Text(
                       "Sign In",
-                      style: GoogleFonts.poppins(
-                        color: primaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13
-                      ),
+                      style: tsPrimary
                     ),
                   ),
                 ],
