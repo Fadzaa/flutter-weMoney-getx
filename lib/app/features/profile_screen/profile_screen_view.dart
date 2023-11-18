@@ -128,7 +128,7 @@ class ProfileScreenView extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          // Get.toNamed(Routes.PRIVACY_POLICY);
+                          Get.toNamed(Routes.PRIVACY_POLICY);
                         },
                         child: Text("Privacy Policy",
                             style: tsProfile
