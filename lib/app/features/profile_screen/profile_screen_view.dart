@@ -21,7 +21,7 @@ class ProfileScreenView extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 200,
+                    height: 160,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -160,35 +160,37 @@ class ProfileScreenView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 15),
+
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 20),
+                    child: Container(
+                        width: 305,
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white, // Background color
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(
+                                color: Colors.red, // Border color
+                              ),
+                            ),
+                          ),
+                          child: Text(
+                            "LOG OUT",
+                            style: GoogleFonts.poppins(
+                              color: Colors.red,
+                            ),
+                          ),
+                        )),
+                  )
                 ],
               ),
             ],
           ),
-          Expanded(child: Container()),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 83),
-            child: Container(
-                width: 305,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white, // Background color
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        color: Colors.red, // Border color
-                      ),
-                    ),
-                  ),
-                  child: Text(
-                    "LOG OUT",
-                    style: GoogleFonts.poppins(
-                      color: Colors.red,
-                    ),
-                  ),
-                )),
-          )
+          // Expanded(child: Container()),
+
         ],
       ),
     );
