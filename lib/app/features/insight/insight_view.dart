@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:we_money_getx/app/features/insight/components/spending_chart.dart';
+import 'package:we_money_getx/app/features/insight/components/spending_evaluation.dart';
 
 import '../../../common/helper/index.dart';
 import '../../model/chart.dart';
@@ -14,19 +16,12 @@ class InsightView extends GetView {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
-    final List<ChartData> chartData = [
-      ChartData('Food', 30, Color(0xFFF65C6E)),
-      ChartData('Healthcare', 10, Color(0xFF1593EF)),
-      ChartData('Entertainment', 60, Color(0xFF32DEF5)),
-
-
-    ];
-
     return Scaffold(
       backgroundColor: Color(0xFFF7F9FA),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          //Heading
           Container(
             width: width,
             height: height * 0.0875,
@@ -68,108 +63,27 @@ class InsightView extends GetView {
             ),
           ),
 
+
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Column(
               children: [
-              Container(
-              width: width,
-              padding: const EdgeInsets.symmetric(
-                vertical: 15,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(4),
-                  border: Border.all(color: lineColor, width: 1)
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    color: primaryColor,
-                                    height: 1,
-                                    width: width * 0.23,
-                                    margin: EdgeInsets.only(bottom: 10),
-                                  ),
-                                  Text(
-                                    "GRAPH OF THE MONTH",
-                                    style: tsPrimaryMedium.copyWith(
-                                        fontSize: 12, 
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              
-                              SvgPicture.asset("assets/icon_filter.svg")
+                //Chart
+                SpendingChart(),
 
-                            ],
-                          ),
-
-                          Container(
-                            width: width,
-                            height: height * 0.25,
-                              child: SfCircularChart(
-                                  legend: Legend(
-                                      isVisible: true,
-                                    position: LegendPosition.right,
-                                    textStyle: tsCommonHeadingList
-                                  ),
-                                  annotations: <CircularChartAnnotation>[
-                                    CircularChartAnnotation(
-                                      verticalAlignment: ChartAlignment.near,
-                                      widget:
-                                      Container(
-                                        child: Text("IDR 1.200.000", style: tsCommonHeadingList,),
-                                      ),
-                                    ),
-                                    CircularChartAnnotation(
-                                      verticalAlignment: ChartAlignment.far,
-                                      widget:
-                                      Container(
-                                          child: Text("Balance Used", style: tsCommonSubheadingList,),
-                                      ),
-                                    ),
-
-                                  ],
-                                  series: <CircularSeries>[
-                                    // Renders doughnut chart
-                                    DoughnutSeries<ChartData, String>(
-                                      radius: '100%',
-                                        dataSource: chartData,
-                                      dataLabelSettings: DataLabelSettings(
-                                          isVisible:true,
-                                        textStyle: tsCommonSubheadingList.copyWith(color: Colors.white),
-                                      ),
-                                        pointColorMapper:(ChartData data,  _) => data.color,
-                                        xValueMapper: (ChartData data, _) => data.x,
-                                        yValueMapper: (ChartData data, _) => data.y,
-                                      innerRadius: '75%',
-                                    )
-                                  ]
-                              )
-                          )
+                //Spending Evaluation
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: SpendingEvaluation(),
+                ),
 
 
-                        ],
-                      )),
 
-                ],
-              ),
-            )
+
               ],
             ),
-          )
+          ),
+
 
         ],
       ),
