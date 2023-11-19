@@ -96,6 +96,7 @@ class AppPages {
         // binding: OnboardingScreenBinding(),
         transition: Transition.noTransition),
         // transition: Transition.noTransition
+        // transition: Transition.noTransition,
     GetPage(
         name: _Paths.PROFILE_PAGE,
         page: () => ProfileScreenView(),
