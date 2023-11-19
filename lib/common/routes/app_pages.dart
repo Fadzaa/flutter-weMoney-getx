@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
+import 'package:we_money_getx/app/features/insight/insight_view.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_binding.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_controller.dart';
 import 'package:we_money_getx/app/features/privacy_policy/privacy_policy_view.dart';
@@ -104,6 +105,12 @@ class AppPages {
     GetPage(
       name: _Paths.PRIVACY_POLICY,
       page: () => PrivacyPolicyView(),
+      // binding: OnboardingScreenBinding(),
+      // transition: Transition.noTransition
+    ),
+    GetPage(
+      name: _Paths.INSIGHT_PAGE,
+      page: () => InsightView(),
       // binding: OnboardingScreenBinding(),
       // transition: Transition.noTransition
     ),
