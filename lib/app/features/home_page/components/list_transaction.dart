@@ -4,12 +4,39 @@ import 'package:we_money_getx/app/global_components/common_heading.dart';
 import 'package:we_money_getx/common/helper/index.dart';
 
 import '../../../../common/routes/app_pages.dart';
+import '../../../model/transaction.dart';
 
 class ListTransaction extends StatelessWidget {
   const ListTransaction({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    List<Transaction> transactions = [
+      Transaction(
+        paymentMethod: 'GOPAY',
+        phoneNumber: '+62895639090806',
+        description: 'PIZZA HUT PEPPERONI LARGE',
+        time: '10:00 AM',
+        amount: -150000,
+      ),
+      Transaction(
+        paymentMethod: 'GOPAY',
+        phoneNumber: '+62895639090806',
+        description: 'Some Transaction',
+        time: '11:30 AM',
+        amount: -50000,
+      ),
+      Transaction(
+        paymentMethod: 'OVO',
+        phoneNumber: '+62895639090806',
+        description: 'Coffee Shop',
+        time: '01:15 PM',
+        amount: -25000,
+      ),
+      // Add more transactions as needed
+    ];
+
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Column(

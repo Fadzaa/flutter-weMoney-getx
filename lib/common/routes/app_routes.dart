@@ -16,6 +16,7 @@ abstract class Routes {
   static const NAVBAR = _Paths.NAVBAR ;
   static const PROFILE_PAGE = _Paths.PROFILE_PAGE ;
   static const SAVING_PAGE = _Paths.SAVING_PAGE ;
+  static const INSIGHT_PAGE = _Paths.INSIGHT_PAGE ;
 }
 
 abstract class _Paths {
@@ -35,4 +36,5 @@ abstract class _Paths {
   static const PROFILE_PAGE  = '/profile';
   static const SAVING_PAGE  = '/saving-page';
   static const PRIVACY_POLICY = '/privacy-policy';
+  static const INSIGHT_PAGE = '/insight';
 }

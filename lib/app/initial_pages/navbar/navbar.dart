@@ -5,10 +5,10 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:we_money_getx/app/features/balance_detail/detail_balance_view.dart';
 import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/features/home_page/home_page_view.dart';
+import 'package:we_money_getx/app/features/insight/insight_view.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_view.dart';
 import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
 import 'package:we_money_getx/app/features/saving_page/saving_page_view.dart';
-import 'package:we_money_getx/common/helper/colors.dart';
 import 'package:we_money_getx/common/helper/index.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
@@ -24,7 +24,7 @@ class Navbar extends StatelessWidget {
     List<Widget> _buildScreens() {
       return [
         HomePageView(),
-        Container(child: Center(child: Text("Insight Page"),),),
+        InsightView(),
         Container(),
         SavingPage(),
         ProfileScreenView(),
