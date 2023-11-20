@@ -30,12 +30,12 @@ class InsightView extends GetView {
                   SpendingChart(),
 
                   //Spending Evaluation
-                  // Padding(
-                  //   padding: const EdgeInsets.symmetric(vertical: 16),
-                  //   child: SpendingEvaluation(),
-                  // ),
-                  //
-                  // SpendingOverview()
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: SpendingEvaluation(),
+                  ),
+
+                  SpendingOverview()
 
 
 
