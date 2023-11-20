@@ -6,3 +6,4 @@ class ChartData {
   final double y;
   final Color color;
 }
+
