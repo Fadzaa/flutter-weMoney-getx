@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:we_money_getx/app/model/chart_legend.dart';
+import 'package:we_money_getx/app/model/ChartLegend.dart';
 
 import '../../../../common/helper/index.dart';
-import '../../../model/chart.dart';
+import '../../../model/Chart.dart';
 
 class SpendingChart extends StatelessWidget {
   const SpendingChart({super.key});
