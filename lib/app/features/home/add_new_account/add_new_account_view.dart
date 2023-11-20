@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 
-import '../../../common/helper/index.dart';
+import '../../../../common/helper/index.dart';
 
 class AddNewAccountView extends StatelessWidget {
   const AddNewAccountView({super.key});

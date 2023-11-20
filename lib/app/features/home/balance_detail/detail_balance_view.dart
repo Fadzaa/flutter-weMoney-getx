@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:we_money_getx/app/features/balance_detail/components/connect_account.dart';
-import 'package:we_money_getx/app/features/balance_detail/components/set_balance_limit.dart';
-import 'package:we_money_getx/app/features/home_page/components/balance_overview.dart';
-import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
+import 'package:we_money_getx/app/features/home/balance_detail/components/connect_account.dart';
+import 'package:we_money_getx/app/features/home/balance_detail/components/set_balance_limit.dart';
+import 'package:we_money_getx/app/features/home/home_page/components/balance_overview.dart';
+import 'package:we_money_getx/app/features/home/home_page/components/total_balance.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 import 'package:we_money_getx/common/helper/index.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';

@@ -19,19 +19,19 @@ export 'initial_pages/onboarding_screen/onboarding_screen_controller.dart' show 
 export 'initial_pages/onboarding_screen/onboarding_screen_binding.dart' show OnboardingScreenBinding;
 
 //Home Page
-export 'features/home_page/home_page_view.dart' show HomePageView;
+export 'features/home/home_page/home_page_view.dart' show HomePageView;
 
 //Balance Detail Page
-export 'features/balance_detail/detail_balance_view.dart' show DetailBalanceView;
+export 'features/home/balance_detail/detail_balance_view.dart' show DetailBalanceView;
 
 //Manual Transaction
 export 'features/manual_transaction/manual_transaction_view.dart' show ManualTransactionView;
 
 //List Transaction
-export 'features/list_transaction_page/list_transaction_view.dart' show ListTransactionView;
+export 'features/home/list_transaction_page/list_transaction_view.dart' show ListTransactionView;
 
 //Add Cash Balance
-export 'features/add_cash_balance/add_cash_balance_view.dart' show AddCashBalanceView;
+export 'features/home/add_cash_balance/add_cash_balance_view.dart' show AddCashBalanceView;
 
 //Add New Account
-export 'features/add_new_account/add_new_account_view.dart' show AddNewAccountView;
+export 'features/home/add_new_account/add_new_account_view.dart' show AddNewAccountView;

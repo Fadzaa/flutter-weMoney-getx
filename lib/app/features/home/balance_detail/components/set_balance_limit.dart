@@ -3,8 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-import '../../../../common/helper/index.dart';
-import '../../../../common/helper/text_formatting.dart';
+import '../../../../../common/helper/index.dart';
+import '../../../../../common/helper/text_formatting.dart';
 
 class SetBalanceLimit extends StatefulWidget {
   const SetBalanceLimit({super.key});

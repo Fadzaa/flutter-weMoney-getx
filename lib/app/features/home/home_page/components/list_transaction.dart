@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/common_heading.dart';
 import 'package:we_money_getx/common/helper/index.dart';
 
-import '../../../../common/routes/app_pages.dart';
-import '../../../model/transaction.dart';
+import '../../../../../common/routes/app_pages.dart';
+import '../../../../model/transaction.dart';
 
 class ListTransaction extends StatelessWidget {
   const ListTransaction({super.key});

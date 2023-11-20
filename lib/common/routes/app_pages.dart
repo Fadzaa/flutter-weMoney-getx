@@ -1,13 +1,12 @@
 import 'package:get/get.dart';
-import 'package:we_money_getx/app/features/edit_profile/edit_profile_view.dart';
+import 'package:we_money_getx/app/features/profile/edit_profile/edit_profile_view.dart';
 import 'package:we_money_getx/app/features/insight/insight_view.dart';
 import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_binding.dart';
-import 'package:we_money_getx/app/features/manual_transaction/manual_transaction_controller.dart';
-import 'package:we_money_getx/app/features/privacy_policy/privacy_policy_view.dart';
-import 'package:we_money_getx/app/features/saving_page/saving_page_view.dart';
+import 'package:we_money_getx/app/features/profile/privacy_policy/privacy_policy_view.dart';
+import 'package:we_money_getx/app/features/saving/saving_page_view.dart';
 import 'package:we_money_getx/app/index.dart';
-import 'package:we_money_getx/app/initial_pages/navbar/navbar.dart';
-import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
+import 'package:we_money_getx/app/features/navbar/navbar.dart';
+import 'package:we_money_getx/app/features/profile/profile_screen/profile_screen_view.dart';
 
 part 'app_routes.dart';
 

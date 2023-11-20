@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:we_money_getx/app/global_components/app_bar.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
-import '../../global_components/common_heading.dart';
+import '../../../global_components/common_heading.dart';
 import '../home_page/components/list_transaction.dart';
 
 class ListTransactionView extends GetView {

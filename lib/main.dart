@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:we_money_getx/app/features/saving_page/saving_page_view.dart';
 import 'package:we_money_getx/app/index.dart';
-import 'package:we_money_getx/app/features/profile_screen/profile_screen_view.dart';
+import 'package:we_money_getx/app/features/profile/profile_screen/profile_screen_view.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
-import 'app/features/profile_screen/profile_screen_view.dart';
+import 'app/features/profile/profile_screen/profile_screen_view.dart';
 
 void main() {
   runApp(const MyApp());

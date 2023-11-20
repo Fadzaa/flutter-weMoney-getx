@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
-import '../../../../common/helper/index.dart';
+import '../../../../../common/helper/index.dart';
 
 class ConnectAccount extends StatelessWidget {
   const ConnectAccount({super.key});

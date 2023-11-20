@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:we_money_getx/app/features/home_page/components/balance_overview.dart';
-import 'package:we_money_getx/app/features/home_page/components/list_transaction.dart';
-import 'package:we_money_getx/app/features/home_page/components/total_balance.dart';
+import 'package:we_money_getx/app/features/home/home_page/components/balance_overview.dart';
+import 'package:we_money_getx/app/features/home/home_page/components/list_transaction.dart';
+import 'package:we_money_getx/app/features/home/home_page/components/total_balance.dart';
 import 'package:we_money_getx/common/routes/app_pages.dart';
 
-import '../../../common/helper/index.dart';
+import '../../../../common/helper/index.dart';
 
 class HomePageView extends GetView {
   const HomePageView({super.key});
