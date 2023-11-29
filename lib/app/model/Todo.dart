@@ -1,11 +1,11 @@
 class Todo {
   final String title;
-  final String time;
-  final String note;
+  final String category;
+  final String target;
 
   Todo({
     required this.title,
-    required this.time,
-    required this.note,
+    required this.category,
+    required this.target,
   });
 }
